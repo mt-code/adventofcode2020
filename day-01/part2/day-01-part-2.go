@@ -19,11 +19,11 @@ func main() {
 	for i := 0; i < len(lines); i++ {
 		firstNum, _ := strconv.Atoi(lines[i])
 
-		for k := i + 1; k < len(lines); k++ {
+		for k := i + 1; k < len(lines); k++ { // Start from i+1 as anything before i has already been checked
 			secondNum, _ := strconv.Atoi(lines[k])
 			currentTotal := firstNum + secondNum
 
-			if currentTotal < 2020 {
+			if currentTotal < 2020 { // Only perform a third loop if there is a chance of it creating a sum of 2020.
 				for _, line := range lines {
 					thirdNum, _ := strconv.Atoi(line)
 

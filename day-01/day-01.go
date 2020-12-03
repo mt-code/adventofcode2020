@@ -19,7 +19,7 @@ func main() {
 	for i := 0; i < len(lines); i++ {
 		firstNum, _ := strconv.Atoi(lines[i])
 
-		for k := i + 1; k < len(lines); k++ {
+		for k := i + 1; k < len(lines); k++ { // Start from i+1 as anything before i has already been checked
 			secondNum, _ := strconv.Atoi(lines[k])
 
 			if (firstNum + secondNum) == 2020 {
